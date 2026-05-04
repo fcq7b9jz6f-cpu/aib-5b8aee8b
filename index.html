@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زيتون و قمر | تجربة لبنانية سينمائية</title>
+    <meta name="description" content="زيتون و قمر يقدم تجربة طعام لبنانية فاخرة مستوحاة من العصر الذهبي لبيروت، في أجواء سينمائية لا مثيل لها.">
+
+    <!-- CDNs -->
+    <script type="importmap">{
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="module" defer></script>
+</head>
+<body>
+    <canvas id="webgl-canvas"></canvas>
+
+    <header class="site-header">
+        <div class="header-content">
+            <span class="logo">زيتون و قمر</span>
+            <nav>
+                <a href="#menu">القائمة</a>
+                <a href="#story">حكايتنا</a>
+                <a href="#ambiance">الأجواء</a>
+            </nav>
+            <a href="#booking" class="btn btn-primary">احجز الآن</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h1 class="hero-title">حيثُ يلتقي<br>الظل و النور</h1>
+            <p class="hero-subtitle">تجربة لبنانية سينمائية في قلب المدينة</p>
+        </section>
+
+        <section id="story" class="story-section content-section">
+            <div class="story-grid">
+                <div class="story-text">
+                    <h2 class="section-title">الفصل الأول: الحكاية</h2>
+                    <p>وُلد "زيتون و قمر" من حنين إلى العصر الذهبي لبيروت، حيث كانت الليالي تمتلئ بالفن، والشعر، ونكهات لا تُنسى. نحن لا نقدم الطعام فحسب، بل نروي قصة. قصة التقاليد العريقة التي تلتقي بالحداثة، وقصة المكونات الأصيلة التي تتحول إلى لوحات فنية على طبقك.</p>
+                </div>
+                <div class="story-image">
+                    <img src="https://images.pexels.com/photos/29395611/pexels-photo-29395611.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="تفاصيل داخلية للمطعم تظهر الأناقة">
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="menu-section content-section">
+            <h2 class="section-title">المشهد الرئيسي: القائمة</h2>
+            <p class="section-intro">مختارات من أطباقنا المميزة، كل طبق هو احتفال بتراثنا الغني.</p>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <h3>كبة بالكرز</h3>
+                    <p>مزيج جريء بين المالح والحلو، حيث تلتقي الكبة التقليدية بصلصة الكرز الحامض الغنية.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>ورق عنب باللحم والكستناء</h3>
+                    <p>لمسة شتوية على طبق كلاسيكي، مطبوخ ببطء في مرق الرمان ليمنحك دفئًا لا يقاوم.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>فيليه غنم بالأعشاب البرية</h3>
+                    <p>لحم طري متبل بمزيج من الأعشاب الجبلية، مقدم مع بيوريه الباذنجان المدخن.</p>
+                </div>
+                 <div class="menu-item">
+                    <h3>كنافة بالجبن والورد</h3>
+                    <p>نهاية حلوة ومبتكرة، كنافة مقرمشة محشوة بجبن العكاوي ومزينة بقطر الورد العطري.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="kitchen" class="kitchen-section content-section">
+            <div class="kitchen-grid">
+                 <div class="kitchen-image">
+                    <img src="https://images.pexels.com/photos/30307754/pexels-photo-30307754.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="الشيف يقوم بتحضير طبق بدقة عالية">
+                 </div>
+                <div class="kitchen-text">
+                    <h2 class="section-title">خلف الكواليس: المطبخ</h2>
+                    <p>يقود مطبخنا الشيف رياض حداد، الذي يؤمن بأن سر النكهة يكمن في بساطة المكونات وجودتها. نحن نتعاون مع مزارعين محليين لنجلب إليكم خيرات الأرض طازجة، ونلتزم بفن الطهي البطيء الذي يكشف عن أعمق النكهات وأصدقها.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ambiance" class="ambiance-section content-section">
+            <h2 class="section-title">الأجواء</h2>
+            <p class="section-intro">مساحة تحتفي بالجمال، حيث تمتزج التفاصيل المعمارية المستوحاة من بيوت بيروت القديمة مع لمسات عصرية جريئة.</p>
+            <div class="gallery">
+                <div class="gallery-item"><img src="https://images.pexels.com/photos/29177206/pexels-photo-29177206.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="زاوية من المطعم مع إضاءة خافتة"></div>
+                <div class="gallery-item"><img src="https://images.pexels.com/photos/30307769/pexels-photo-30307769.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="طاولة طعام مزينة بشكل أنيق"></div>
+                <div class="gallery-item"><img src="https://images.pexels.com/photos/27359363/pexels-photo-27359363.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="ديكور داخلي للمطعم"></div>
+                <div class="gallery-item"><img src="https://images.pexels.com/photos/30307762/pexels-photo-30307762.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="تفاصيل معمارية في سقف المطعم"></div>
+            </div>
+        </section>
+
+        <section id="booking" class="booking-section content-section">
+            <h2 class="section-title">الحجز</h2>
+            <p>ندعوكم لتكونوا جزءًا من حكايتنا. احجزوا طاولتكم واستعدوا لرحلة حسية لا تنسى.</p>
+            <a href="mailto:reservations@oliveandmoon.com" class="btn btn-primary btn-large">احجز طاولتك</a>
+        </section>
+    </main>
+
+    <footer class="site-footer-main">
+        <p>&copy; 2024 زيتون و قمر. جميع الحقوق محفوظة.</p>
+        <p>شارع الفن، وسط المدينة</p>
+    </footer>
+
+</body>
+</html>
